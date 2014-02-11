@@ -1,4 +1,4 @@
-(* pack consecutive duplicates of list elements into sublist *)
+(* Pack consecutive duplicates of list elements into sublist. *)
 let pack l = 
   let rec aux current result = function
     | []        -> current :: result

@@ -1,3 +1,4 @@
+(* Find the number of elements of a list. *)
 let rec length = function
   | [] -> 0
   | _::t -> (length t)+1

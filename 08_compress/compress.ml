@@ -1,3 +1,4 @@
+(* Eliminate consecutive duplicates of list elements. *)
 let rec compress = function
   | [] -> []
   | [x] -> [x]

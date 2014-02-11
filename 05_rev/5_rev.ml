@@ -1,3 +1,4 @@
+(* Reverse a list. *)
 let rev l =
   let rec aux result = function
     | [] -> result
