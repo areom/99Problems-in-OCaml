@@ -8,3 +8,16 @@ let encode l =
                                         else aux 1 ((count, head) :: result) tail
     in
     List.rev (aux 1 [] l)
+
+let encode_alt l =
+    let pack l = 
+        let rec aux current result = function
+            | []  -> []
+            | [x] -> (x :: current) :: result
+            | hd :: (nk :: _ as tl) -> if hd = nk 
+                                       then aux (hd :: current) result tl
+                                       else aux [] ((hd :: current) :: result) tl
+        in
+        List.rev (aux [] [] l)
+    in    
+    List.map (fun l -> (List.length l, List.hd l)) (pack l)
