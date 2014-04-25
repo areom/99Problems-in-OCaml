@@ -1,5 +1,5 @@
 (* Generate a random permutation of the elements of a list. *)
-let permutaion l = 
+let permutation l = 
     let extract_rand l = 
         let rec extract l i = function
             | [] -> raise Not_found
